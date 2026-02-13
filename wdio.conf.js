@@ -63,10 +63,10 @@ export const config = {
         }, */
         {
             "platformName": "Android",
-            "appium:deviceName": "Medium Phone",
+            "appium:deviceName": process.env.ANDROID_DEVICE_NAME || "Medium Phone",
             "appium:automationName": "uiautomator2",
-            "appium:app": "app/wdio.apk",
-            "appium:platformVersion": "9.0"   
+            "appium:app": process.env.ANDROID_APP_PATH || "app/wdio.apk",
+            "appium:platformVersion": process.env.ANDROID_PLATFORM_VERSION || "9.0"
         }
     ],
 
